@@ -256,24 +256,28 @@ article {
   max-width: fit-content;
 }
 
-/*.introParagraph {
-  display: flex;
-  justify-content: center;
+.codingLanguages {
+  margin-top: 15%;
 }
 
-.introParagraph > article {
-  max-width: fit-content;
-  width: auto;
-  text-align: center;
-}*/
-
 @media (min-width: 55em) {
-  p {
-    width: auto;
-    margin-bottom: 0%;
-    display: center;
+  .intro {
+    margin-bottom: 30%;
+    width: 50%;
+    margin: 0 auto;
     text-align: center;
-    max-width: fit-content;
+  }
+  article {
+    font-size: 18px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  article p {
+    margin-bottom: 0%;
+    text-align: center;
+    width: 100%; /* set the width to 100% */
   }
 
   .projectSection,
@@ -284,24 +288,35 @@ article {
   }
   .projectSection {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(5, 1fr);
+    gap: 10px; /* add a 10px gap between grid cells */
+    justify-items: center; /* center the grid items horizontally */
+    align-items: center; /* center the grid items vertically */
+    width: 100%;
+    height: 100vh; /* changed from 100% to 100vh to make it full height */
+    margin-bottom: 10%;
     grid-template-areas:
-      "productivitySection chartSection"
-      "huffmanSection algorithmSection"
-      "cinematicSection cinematicSection";
-    gap: 0%;
+      " . productivitySection . "
+      " . chartSection . "
+      " . huffmanSection . "
+      " . algorithmSection . "
+      " . cinematicSection . ";
   }
 
-  /* productivity project */
   .productivitySection {
+    grid-column: 2/3;
+    grid-row: 1/2;
     grid-area: productivitySection;
+    justify-content: center;
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
   }
 
   /* chart */
   .chartSection {
+    grid-column: 2/3;
+    grid-row: 2/3;
     grid-area: chartSection;
     display: flex;
     justify-content: space-evenly;
@@ -309,6 +324,8 @@ article {
 
   /* huffman encoding */
   .huffmanSection {
+    grid-column: 2/3;
+    grid-row: 3/4;
     grid-area: huffmanSection;
     justify-content: space-evenly;
     display: flex;
@@ -316,6 +333,8 @@ article {
 
   /* algorithm */
   .algorithmSection {
+    grid-column: 2/3;
+    grid-row: 4/5;
     grid-area: algorithmSection;
     justify-content: space-evenly;
     display: flex;
@@ -323,6 +342,8 @@ article {
 
   /* cinema */
   .cinematicSection {
+    grid-column: 2/3;
+    grid-row: 5/6;
     grid-area: cinematicSection;
     justify-content: center;
     display: flex;
