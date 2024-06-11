@@ -29,7 +29,7 @@ function downloadResume() {
     let link = document.createElement("a");
     // Change the structure of the URL to be a direct download link
     link.href =
-      "https://drive.google.com/uc?export=download&id=1aNBEBVoiHMLO3PKhBjQmYKTvrFgE2yeW";
+      "https://drive.google.com/file/d/1pOY4OHbNIRTpwgrQkST-5-yn2ZCsUUcL/view?usp=sharing";
     link.download = "My-Resume.pdf";
     link.click();
   };
