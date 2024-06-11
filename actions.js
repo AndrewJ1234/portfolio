@@ -35,3 +35,5 @@ function downloadResume() {
   };
 }
 downloadResume();
+
+console.log(1);
